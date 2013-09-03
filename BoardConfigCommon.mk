@@ -29,6 +29,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/asus/grouper/bluetooth
 TARGET_BOARD_PLATFORM := tegra3
 TARGET_TEGRA_VERSION := t30
 
+TARGET_CPU_VARIANT := cortex-a9
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
@@ -84,5 +85,22 @@ BOARD_USES_GROUPER_MODULES := true
 # Required for CWM
 BOARD_HAS_NO_SELECT_BUTTON := true
 
-TARGET_KERNEL_SOURCE := kernel/asus/grouper
-TARGET_KERNEL_CONFIG := cyanogenmod_grouper_defconfig
+#TARGET_KERNEL_SOURCE := kernel/asus/grouper
+#TARGET_KERNEL_CONFIG := cyanogenmod_grouper_defconfig
+
+#TWRP config:
+DEVICE_RESOLUTION := 800x1280
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_SDCARD_ON_DATA := true
+TW_NO_USB_STORAGE := true
+TW_INCLUDE_JB_CRYPTO := true
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/usb-otg"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "usb-otg"
+TW_CUSTOM_POWER_BUTTON := 107
+TW_BRIGHTNESS_PATH := /sys/devices/platform/pwm-backlight/backlight/pwm-backlight/brightness
+TW_MAX_BRIGHTNESS := 255
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+HAVE_SELINUX := true
+
