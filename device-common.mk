@@ -31,6 +31,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 include frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk
 
 PRODUCT_COPY_FILES += \
+    device/asus/grouper/kernel:kernel
+
+PRODUCT_COPY_FILES += \
     device/asus/grouper/fstab.grouper:root/fstab.grouper \
     device/asus/grouper/twrp.fstab:recovery/root/etc/twrp.fstab \
     device/asus/grouper/ueventd.grouper.rc:root/ueventd.grouper.rc \
