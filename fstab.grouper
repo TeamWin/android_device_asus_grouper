@@ -11,4 +11,4 @@
 /dev/block/platform/sdhci-tegra.3/by-name/LNX           /boot               emmc      defaults                                                      defaults
 /dev/block/platform/sdhci-tegra.3/by-name/SOS           /recovery           emmc      defaults                                                      defaults
 /dev/block/platform/sdhci-tegra.3/by-name/USP           /staging            emmc      defaults                                                      defaults
-
+/dev/block/platform/sdhci-tegra.3/by-name/UDA           /sdcard             ext4      noatime,nosuid,nodev,nomblk_io_submit,errors=panic    wait,encryptable=/dev/block/platform/sdhci-tegra.3/by-name/MDA
