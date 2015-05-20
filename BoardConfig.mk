@@ -42,40 +42,39 @@ include device/asus/grouper/BoardConfigCommon.mk
 
 TARGET_RECOVERY_FSTAB = device/asus/grouper/fstab.grouper
 
-BOARD_SEPOLICY_DIRS := \
-        device/asus/grouper/sepolicy
+#BOARD_SEPOLICY_DIRS := \
+#        device/asus/grouper/sepolicy
 
-BOARD_SEPOLICY_UNION := \
-        file_contexts \
-        genfs_contexts \
-        app.te \
-        btmacreader.te \
-        device.te \
-        drmserver.te \
-        init_shell.te \
-        file.te \
-        rild.te \
-        sensors_config.te \
-        shell.te \
-        surfaceflinger.te \
-        system.te \
-        zygote.te
+#BOARD_SEPOLICY_UNION := \
+#        file_contexts \
+#        genfs_contexts \
+#        app.te \
+#        btmacreader.te \
+#        device.te \
+#        drmserver.te \
+#        init_shell.te \
+#        file.te \
+#        rild.te \
+#        sensors_config.te \
+#        shell.te \
+#        surfaceflinger.te \
+#        system.te \
+#        zygote.te
 
 #TWRP
 DEVICE_RESOLUTION := 800x1280
-#DEVICE_RESOLUTION := 280x280
 BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_NO_USB_STORAGE := false
 TW_INCLUDE_L_CRYPTO := true
 
 #TW_INCLUDE_CRYPTO := true
-TW_CRYPTO_FS_TYPE := "ext4"
-TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/sdhci-tegra.3/by-name/UDA"
-TW_CRYPTO_MNT_POINT := "/data"
-TW_CRYPTO_FS_OPTIONS := "nomblk_io_submit,errors=panic"
-TW_CRYPTO_FS_FLAGS := "0x00000406"
-TW_CRYPTO_KEY_LOC := "/dev/block/platform/sdhci-tegra.3/by-name/MDA"
-TW_ROTATION := 90
+#TW_CRYPTO_FS_TYPE := "ext4"
+#TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/sdhci-tegra.3/by-name/UDA"
+#TW_CRYPTO_MNT_POINT := "/data"
+#TW_CRYPTO_FS_OPTIONS := "nomblk_io_submit,errors=panic"
+#TW_CRYPTO_FS_FLAGS := "0x00000406"
+#TW_CRYPTO_KEY_LOC := "/dev/block/platform/sdhci-tegra.3/by-name/MDA"
+#TW_ROTATION := 90
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
